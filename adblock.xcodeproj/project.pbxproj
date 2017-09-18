@@ -12,7 +12,34 @@
 		420EAC161F6F66FC009DDF08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420EAC141F6F66FC009DDF08 /* Main.storyboard */; };
 		420EAC181F6F66FC009DDF08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420EAC171F6F66FC009DDF08 /* Assets.xcassets */; };
 		420EAC1B1F6F66FC009DDF08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420EAC191F6F66FC009DDF08 /* LaunchScreen.storyboard */; };
+		420EAC291F6F6884009DDF08 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 420EAC281F6F6884009DDF08 /* blockerList.json */; };
+		420EAC2B1F6F6884009DDF08 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420EAC2A1F6F6884009DDF08 /* ContentBlockerRequestHandler.swift */; };
+		420EAC2F1F6F6884009DDF08 /* adbanner.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 420EAC261F6F6884009DDF08 /* adbanner.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		420EAC2D1F6F6884009DDF08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 420EAC051F6F66FC009DDF08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 420EAC251F6F6884009DDF08;
+			remoteInfo = adbanner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		420EAC331F6F6884009DDF08 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				420EAC2F1F6F6884009DDF08 /* adbanner.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		420EAC0D1F6F66FC009DDF08 /* adblock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = adblock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +49,21 @@
 		420EAC171F6F66FC009DDF08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420EAC1A1F6F66FC009DDF08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		420EAC1C1F6F66FC009DDF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		420EAC261F6F6884009DDF08 /* adbanner.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = adbanner.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		420EAC281F6F6884009DDF08 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		420EAC2A1F6F6884009DDF08 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		420EAC2C1F6F6884009DDF08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		420EAC0A1F6F66FC009DDF08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		420EAC231F6F6884009DDF08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				420EAC0F1F6F66FC009DDF08 /* adblock */,
+				420EAC271F6F6884009DDF08 /* adbanner */,
 				420EAC0E1F6F66FC009DDF08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				420EAC0D1F6F66FC009DDF08 /* adblock.app */,
+				420EAC261F6F6884009DDF08 /* adbanner.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +104,16 @@
 			path = adblock;
 			sourceTree = "<group>";
 		};
+		420EAC271F6F6884009DDF08 /* adbanner */ = {
+			isa = PBXGroup;
+			children = (
+				420EAC281F6F6884009DDF08 /* blockerList.json */,
+				420EAC2A1F6F6884009DDF08 /* ContentBlockerRequestHandler.swift */,
+				420EAC2C1F6F6884009DDF08 /* Info.plist */,
+			);
+			path = adbanner;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +124,34 @@
 				420EAC091F6F66FC009DDF08 /* Sources */,
 				420EAC0A1F6F66FC009DDF08 /* Frameworks */,
 				420EAC0B1F6F66FC009DDF08 /* Resources */,
+				420EAC331F6F6884009DDF08 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				420EAC2E1F6F6884009DDF08 /* PBXTargetDependency */,
 			);
 			name = adblock;
 			productName = adblock;
 			productReference = 420EAC0D1F6F66FC009DDF08 /* adblock.app */;
 			productType = "com.apple.product-type.application";
+		};
+		420EAC251F6F6884009DDF08 /* adbanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420EAC321F6F6884009DDF08 /* Build configuration list for PBXNativeTarget "adbanner" */;
+			buildPhases = (
+				420EAC221F6F6884009DDF08 /* Sources */,
+				420EAC231F6F6884009DDF08 /* Frameworks */,
+				420EAC241F6F6884009DDF08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = adbanner;
+			productName = adbanner;
+			productReference = 420EAC261F6F6884009DDF08 /* adbanner.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +164,10 @@
 				ORGANIZATIONNAME = "山田龍";
 				TargetAttributes = {
 					420EAC0C1F6F66FC009DDF08 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					420EAC251F6F6884009DDF08 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -114,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				420EAC0C1F6F66FC009DDF08 /* adblock */,
+				420EAC251F6F6884009DDF08 /* adbanner */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +203,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		420EAC241F6F6884009DDF08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420EAC291F6F6884009DDF08 /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		420EAC221F6F6884009DDF08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				420EAC2B1F6F6884009DDF08 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		420EAC2E1F6F6884009DDF08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 420EAC251F6F6884009DDF08 /* adbanner */;
+			targetProxy = 420EAC2D1F6F6884009DDF08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		420EAC141F6F66FC009DDF08 /* Main.storyboard */ = {
@@ -273,6 +371,7 @@
 		420EAC201F6F66FC009DDF08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 277BC784PH;
@@ -288,6 +387,7 @@
 		420EAC211F6F66FC009DDF08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 277BC784PH;
@@ -295,6 +395,38 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Tychy.inc.adblock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		420EAC301F6F6884009DDF08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 277BC784PH;
+				INFOPLIST_FILE = adbanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tychy.inc.adblock.adbanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		420EAC311F6F6884009DDF08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 277BC784PH;
+				INFOPLIST_FILE = adbanner/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tychy.inc.adblock.adbanner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +449,15 @@
 			buildConfigurations = (
 				420EAC201F6F66FC009DDF08 /* Debug */,
 				420EAC211F6F66FC009DDF08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		420EAC321F6F6884009DDF08 /* Build configuration list for PBXNativeTarget "adbanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				420EAC301F6F6884009DDF08 /* Debug */,
+				420EAC311F6F6884009DDF08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
